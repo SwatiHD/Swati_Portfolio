@@ -22,7 +22,7 @@ export default function Experience() {
         {jobs.map((job, index) => (
           <div
             key={index}
-            className="group border border-slate-800 rounded-2xl p-6 hover:bg-slate-800/30 transition"
+            className="bg-black/50 backdrop-blur-xl border border-white/10 rounded-[32px] shadow-[0_8px_40px_rgba(0,0,0,0.5)] p-8 md:p-12 hover:border-purple-500/30 transition-all duration-300"
           >
             <p className="text-sm text-slate-500">{job.year}</p>
 
