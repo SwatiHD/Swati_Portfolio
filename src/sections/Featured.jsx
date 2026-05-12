@@ -1,15 +1,15 @@
 const features = [
   {
-    title: "AI Resume Analyzer",
-    desc: "Built an AI-assisted resume optimization platform using React and OpenAI APIs.",
+    title: "AI Resume JD Matcher",
+    desc: "Built a full AI-powered resume analysis tool — users drop in their resume and a job description, and get back ATS scores, keyword gaps, and rewrite suggestions. Wired up OpenAI APIs, file uploads, and real-time result rendering from scratch.",
   },
   {
-    title: "Reusable UI Component System",
-    desc: "Created scalable reusable frontend components with Tailwind CSS.",
+    title: "Gantt Chart Library Research & Recommendation",
+    desc: "Evaluated multiple React Gantt libraries and made the call to go with SVAR — saved the team weeks of building custom drag-and-drop and dependency logic. The recommendation stuck and became the foundation of the entire MS Project-style planning module we shipped.",
   },
   {
-    title: "Frontend Performance Optimization",
-    desc: "Reduced render time and improved UI responsiveness using lazy loading and memoization.",
+    title: "Performance Overhaul — ERP Task Dashboard",
+    desc: "The dashboard was choking on 1,000+ task records. Diagnosed the bottleneck, applied lazy loading, memoization, and pagination — brought render time down ~30% without touching the data layer. One of those fixes that's invisible when it works, which is exactly the point.",
   },
 ];
 

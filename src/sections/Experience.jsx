@@ -1,15 +1,27 @@
 const jobs = [
   {
-    year: "2025 — PRESENT",
-    title: "Frontend Developer",
-    company: "Freelance + AI Projects",
-    desc: "Built responsive UI applications using React, Tailwind CSS, API integrations, and AI-assisted workflows.",
+    year: "2025",
+    title: "Software Engineer",
+    company: "ACTouch Technologies",
+    desc: "Owned the frontend for ACTouch's ERP planning module — built a Gantt chart with task dependencies and hierarchy from scratch, then spent a lot of time making it actually usable at scale. Got rendering performance up ~30% for 1,000+ task views using memoization, lazy loading, and pagination. Also used AI tools like Cursor throughout to move faster and debug smarter.",
   },
   {
-    year: "2023 — 2025",
-    title: "Business Analyst",
-    company: "APT IT Solutions",
-    desc: "Worked on requirement analysis, workflows, client communication, and UI improvement initiatives.",
+    year: "2024",
+    title: "Business Analyst Intern - Frontend Focus",
+    company: "BACentric Solutions & Kitaabh Technologies",
+    desc: "Worked between product and engineering — took business requirements and turned them into specs developers could actually build from. Helped avoid a lot of back-and-forth by thinking through edge cases and UI behavior upfront, before things got built the wrong way.",
+  },
+  {
+    year: "2023",
+    title: "Frontend Developer",
+    company: "Harlalka services India Pvt Ltd",
+    desc: "Built 15+ UI modules for an enterprise marketplace using React, Next.js, and TypeScript. Set up a shared component system for search, filters, and listing pages that cut redundant work by ~30%. Also handled Redux, REST APIs, accessibility, and kept production bugs down ~20% through proper debugging habits.",
+  },
+  {
+    year: "2020 — 2023",
+    title: "Graduate Trainee Engineer",
+    company: "Huawei Technologies",
+    desc: "Spent 3 years building and maintaining frontend modules for cloud-based telecom monitoring systems in React and JavaScript. Dug deep into component lifecycle and async data flows to ship reliable dashboard features, tightened form validation logic that cut invalid submissions by ~35%, and used SQL to validate data end-to-end — from API response to what actually renders on screen.",
   },
 ];
 

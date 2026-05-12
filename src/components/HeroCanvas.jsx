@@ -91,17 +91,19 @@ export default function HeroCanvas() {
       <div className="absolute bottom-36 right-72 w-28 h-28 border border-slate-300 rounded-full opacity-30" />
       {/* content */}
       <div className="max-w-2xl text-center relative z-10">
-        <p className="mb-6 text-lg text-slate-700 font-medium">
-          Hello there! 👋
+        <p className="mb-5 text-xs tracking-widest text-teal-400 uppercase font-medium">
+          Hello there
         </p>
 
-        <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8">
+        <h1 className="text-6xl md:text-7xl font-bold text-stone-100 mb-3 leading-none tracking-tight">
           Swati HD
         </h1>
 
-        <p className="text-xl md:text-2xl leading-10 text-slate-700 max-w-xl mx-auto">
-          Frontend Developer building responsive web applications with React,
-          Tailwind CSS, animations, and AI-powered workflows.
+        <div className="w-9 h-0.5 bg-teal-400 mx-auto mb-7" />
+
+        <p className="text-lg md:text-xl text-stone-500 leading-relaxed max-w-md mx-auto">
+          Three years of turning figma files and messy requirements into UIs
+          that actually work.
         </p>
       </div>
     </section>
