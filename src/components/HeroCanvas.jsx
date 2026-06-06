@@ -2,24 +2,25 @@ import FloatingShape from "./FloatingShape";
 
 export default function HeroCanvas() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20 md:py-0">
       {/* dotted texture background */}
       <div className="absolute inset-0 bg-[radial-gradient(#d9b6b6_1px,transparent_1px)] [background-size:32px_32px] opacity-20" />
 
       {/* floating filled shapes */}
-      <FloatingShape className="top-28 left-24 w-48 h-48 bg-[#E88D8D] rounded-b-full" />
 
-      <FloatingShape className="top-24 right-32 w-40 h-40 bg-[#E5A55C] rounded-full" />
+      <FloatingShape className="top-20 left-0 md:left-24 w-24 h-24 md:w-48 md:h-48 bg-[#E88D8D] rounded-b-full opacity-60 md:opacity-100" />
 
-      <FloatingShape className="bottom-24 left-36 w-44 h-44 bg-[#B59ACD] rounded-tr-full" />
+      <FloatingShape className="top-16 right-0 md:right-32 w-20 h-20 md:w-40 md:h-40 bg-[#E5A55C] rounded-full opacity-60 md:opacity-100" />
 
-      <FloatingShape className="bottom-28 right-28 w-52 h-52 bg-[#7B8794] rounded-tl-full" />
+      <FloatingShape className="bottom-24 left-4 md:left-36 w-24 h-24 md:w-44 md:h-44 bg-[#B59ACD] rounded-tr-full opacity-60 md:opacity-100" />
 
+      <FloatingShape className="bottom-20 right-0 md:right-28 w-28 h-28 md:w-52 md:h-52 bg-[#7B8794] rounded-tl-full opacity-60 md:opacity-100" />
       {/* top-left closed dashed arc */}
-      <svg
+      {/* <svg
         className="absolute -top-18 left-16 w-52 h-52 opacity-50"
         viewBox="0 0 200 200"
-      >
+      > */}
+      <svg className="hidden md:block absolute -top-18 left-16 w-52 h-52 opacity-50">
         <path
           d="M40 120 A60 60 0 1 1 160 120 L40 120"
           fill="none"
@@ -40,8 +41,12 @@ export default function HeroCanvas() {
       </svg>
 
       {/* right orange closed shape */}
-      <svg
+      {/* <svg
         className="absolute top-[38%] right-20 w-44 h-44 opacity-70 rotate-[25deg]"
+        viewBox="0 0 200 200"
+      > */}
+      <svg
+        className=" hidden md:block absolute top-[38%] right-20 w-44 h-44 opacity-70 rotate-[25deg]"
         viewBox="0 0 200 200"
       >
         <path
@@ -56,8 +61,12 @@ export default function HeroCanvas() {
       </svg>
 
       {/* bottom-left pink closed shape */}
-      <svg
+      {/* <svg
         className="absolute bottom-28 left-16 w-40 h-40 opacity-60 rotate-[15deg]"
+        viewBox="0 0 200 200"
+      > */}
+      <svg
+        className="hidden md:block absolute bottom-28 left-16 w-40 h-40 opacity-60 rotate-[15deg]"
         viewBox="0 0 200 200"
       >
         <path
@@ -72,6 +81,10 @@ export default function HeroCanvas() {
       </svg>
 
       {/* bottom-center lavender closed shape */}
+      {/* <svg
+        className="absolute bottom-20 left-[38%] w-40 h-40 opacity-50 -rotate-[20deg]"
+        viewBox="0 0 200 200"
+      > */}
       <svg
         className="absolute bottom-20 left-[38%] w-40 h-40 opacity-50 -rotate-[20deg]"
         viewBox="0 0 200 200"
@@ -88,20 +101,20 @@ export default function HeroCanvas() {
       </svg>
 
       {/* bottom-right thin circle */}
-      <div className="absolute bottom-36 right-72 w-28 h-28 border border-slate-300 rounded-full opacity-30" />
+      <div className="hidden md:block absolute bottom-36 right-72 w-28 h-28 border border-slate-300 rounded-full opacity-30" />
       {/* content */}
       <div className="max-w-2xl text-center relative z-10">
         <p className="mb-5 text-xs tracking-widest text-teal-400 uppercase font-medium">
           Hello there
         </p>
 
-        <h1 className="text-6xl md:text-7xl font-bold text-stone-100 mb-3 leading-none tracking-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-stone-100 mb-3 leading-none tracking-tight">
           Swati HD
         </h1>
 
         <div className="w-9 h-0.5 bg-teal-400 mx-auto mb-7" />
 
-        <p className="text-lg md:text-xl text-stone-500 leading-relaxed max-w-md mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-stone-500 leading-relaxed max-w-md mx-auto">
           Three years of turning figma files and messy requirements into UIs
           that actually work.
         </p>
