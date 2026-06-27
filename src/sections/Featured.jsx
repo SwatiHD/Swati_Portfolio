@@ -1,25 +1,37 @@
+import { FaGithub } from "react-icons/fa";
+
 const features = [
   {
     title: "AI Resume JD Matcher",
     desc: "Built a full AI-powered resume analysis tool — users drop in their resume and a job description, and get back ATS scores, keyword gaps, and rewrite suggestions. Wired up OpenAI APIs, file uploads, and real-time result rendering from scratch.",
     techstack: ["React", "JavaScript", "OpenAI API", "Tailwind CSS"],
+    github: "https://github.com/SwatiHD/AI_Resume-JD_Matcher",
   },
   {
     title: "Secured Webhook System",
     desc: "Designed and developed a secure webhook communication system with HMAC authentication, event-driven architecture, and retry mechanisms, demonstrating real-world service-to-service communication patterns used by modern platforms and payment gateways.",
     techstack: [
       "Node.js",
-      "Express.js",
+      "Express",
       "MongoDB",
       "Mongoose",
       "HMAC SHA256",
       "JavaScript",
     ],
+    github: "https://github.com/SwatiHD/WebHookProject",
   },
   {
     title: "Performance Overhaul — ERP Task Dashboard",
     desc: "The dashboard was choking on 1,000+ task records. Diagnosed the bottleneck, applied lazy loading, memoization, and pagination — brought render time down ~30% without touching the data layer. One of those fixes that's invisible when it works, which is exactly the point.",
-    techstack: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
+    techstack: [
+      "React",
+      "Node.js",
+      "Express",
+      "SQL",
+      "JavaScript",
+      "REST APIs",
+      "Tailwind CSS",
+    ],
   },
 ];
 
@@ -34,7 +46,19 @@ export default function Featured() {
             key={index}
             className="bg-black/50 backdrop-blur-xl border border-white/10 rounded-[32px] shadow-[0_8px_40px_rgba(0,0,0,0.5)] p-8 md:p-12 hover:border-purple-500/30 transition-all duration-300"
           >
-            <h3 className="text-xl text-white">{item.title}</h3>
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl text-white font-medium">{item.title}</h3>
+
+              <a
+                href={item.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-white transition duration-300"
+                aria-label="View GitHub Repository"
+              >
+                <FaGithub size={24} />
+              </a>
+            </div>
 
             <p className="mt-4 leading-7 text-slate-400">{item.desc}</p>
             <p className="mt-4 text-sm text-teal-300">
