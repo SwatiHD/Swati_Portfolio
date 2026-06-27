@@ -7,3 +7,13 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes fall {
+  from {
+    transform: translateY(-120px);
+  }
+
+  to {
+    transform: translateY(120vh);
+  }
+}
