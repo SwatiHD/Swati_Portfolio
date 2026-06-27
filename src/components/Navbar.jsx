@@ -1,10 +1,14 @@
 import { FaPalette } from "react-icons/fa";
-
+import "../App.css";
 export default function Navbar({ mode, setMode }) {
   const links = ["About", "Experience", "Skills", "Featured", "Contact"];
 
   const cycleMode = () => {
-    setMode((prev) => (prev + 1) % 5);
+    setMode((prev) => {
+      const next = (prev + 1) % 4;
+      console.log("Mode:", next);
+      return next;
+    });
   };
 
   return (

@@ -1,66 +1,92 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 export default function WeatherEffects({ mode }) {
-  const [particles, setParticles] = useState([]);
-
-  useEffect(() => {
-    if (mode < 2) {
-      setParticles([]);
-      return;
+  const particles = useMemo(() => {
+    if (mode === 2) {
+      return Array.from({ length: 120 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        delay: Math.random() * 4,
+        duration: 0.9 + Math.random(),
+      }));
     }
 
-    const count = mode === 2 ? 80 : mode === 3 ? 200 : 120;
+    if (mode === 3) {
+      return Array.from({ length: 80 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        delay: Math.random() * 5,
+        duration: 5 + Math.random() * 5,
+        size: 2 + Math.random() * 5,
+      }));
+    }
 
-    const generated = Array.from({ length: count }).map((_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      delay: Math.random() * 5,
-      duration:
-        mode === 2
-          ? Math.random() * 2 + 4
-          : mode === 3
-            ? Math.random() * 1 + 1
-            : Math.random() * 4 + 5,
-      size: mode === 4 ? Math.random() * 4 + 2 : Math.random() * 10 + 10,
-    }));
-
-    setParticles(generated);
+    return [];
   }, [mode]);
 
-  if (mode < 2) return null;
-
   return (
-    <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
-      {particles.map((particle) => (
-        <div
-          key={particle.id}
-          className="absolute top-[-50px]"
-          style={{
-            left: `${particle.left}%`,
-            animation: `fall ${particle.duration}s linear infinite`,
-            animationDelay: `${particle.delay}s`,
-          }}
-        >
-          {mode === 4 ? (
-            <div
+    <>
+      {/* SUNLIGHT */}
+
+      {mode === 1 && (
+        <>
+          <div className="sunGlow" />
+          <div className="sunRays" />
+
+          <div className="dust">
+            {Array.from({ length: 45 }).map((_, i) => (
+              <span
+                key={i}
+                className="dustParticle"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 8}s`,
+                  animationDuration: `${8 + Math.random() * 10}s`,
+                }}
+              />
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* RAIN */}
+
+      {mode === 2 && (
+        <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
+          {particles.map((p) => (
+            <span
+              key={p.id}
+              className="rainDrop"
               style={{
-                width: particle.size,
-                height: particle.size,
+                left: `${p.left}%`,
+                animationDelay: `${p.delay}s`,
+                animationDuration: `${p.duration}s`,
               }}
-              className="rounded-full bg-white opacity-80"
             />
-          ) : (
-            <div
-              style={{
-                height: particle.size,
-              }}
-              className={`w-[1px] ${
-                mode === 2 ? "bg-white/30" : "bg-white/60"
-              }`}
-            />
-          )}
+          ))}
         </div>
-      ))}
-    </div>
+      )}
+
+      {/* SNOW */}
+
+      {mode === 3 && (
+        <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
+          {particles.map((p) => (
+            <span
+              key={p.id}
+              className="snowFlake"
+              style={{
+                left: `${p.left}%`,
+                width: p.size,
+                height: p.size,
+                animationDelay: `${p.delay}s`,
+                animationDuration: `${p.duration}s`,
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </>
   );
 }

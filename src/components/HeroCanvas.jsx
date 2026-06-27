@@ -1,5 +1,4 @@
 import FloatingShape from "./FloatingShape";
-
 export default function HeroCanvas() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20 md:py-0">
@@ -104,10 +103,9 @@ export default function HeroCanvas() {
       <div className="hidden md:block absolute bottom-36 right-72 w-28 h-28 border border-slate-300 rounded-full opacity-30" />
       {/* content */}
       <div className="max-w-2xl text-center relative z-10">
-        <p className="mb-5 text-xs tracking-widest text-teal-400 uppercase font-medium">
-          Hello there
+        <p className="mb-5 text-xl tracking-widest text-teal-400 uppercase font-medium">
+          Hello!! I'm
         </p>
-
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-stone-100 mb-3 leading-none tracking-tight">
           Swati HD
         </h1>
@@ -115,8 +113,8 @@ export default function HeroCanvas() {
         <div className="w-9 h-0.5 bg-teal-400 mx-auto mb-7" />
 
         <p className="text-base sm:text-lg md:text-xl text-stone-500 leading-relaxed max-w-md mx-auto">
-          Three years of turning figma files and messy requirements into UIs
-          that actually work.
+          Three years of turning figma files and messy requirements into
+          software products that are not only functional but also easy to use.
         </p>
       </div>
     </section>

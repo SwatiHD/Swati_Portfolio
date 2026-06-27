@@ -15,17 +15,17 @@ const jobs = [
     year: "2023",
     title: "Frontend Developer",
     company: "Harlalka services India Pvt Ltd",
-    desc: "Built 15+ UI modules for an enterprise marketplace using React, Next.js, and TypeScript. Set up a shared component system for search, filters, and listing pages that cut redundant work by ~30%. Also handled Redux, REST APIs, accessibility, and kept production bugs down ~20% through proper debugging habits.",
+    desc: "Built 15+ UI modules for an enterprise marketplace using React,Node.js, Next.js, and TypeScript. Set up a shared component system for search, filters, and listing pages that cut redundant work by ~30%. Also handled Redux, REST APIs, accessibility, and kept production bugs down ~20% through proper debugging habits.",
   },
   {
     year: "2020 — 2023",
     title: "Graduate Trainee Engineer",
     company: "Huawei Technologies",
-    desc: "Spent 3 years building and maintaining frontend modules for cloud-based telecom monitoring systems in React and JavaScript. Dug deep into component lifecycle and async data flows to ship reliable dashboard features, tightened form validation logic that cut invalid submissions by ~35%, and used SQL to validate data end-to-end — from API response to what actually renders on screen.",
+    desc: "Spent 3 years building and maintaining frontend modules for cloud-based telecom monitoring systems in React and Node.js. Dug deep into component lifecycle and async data flows to ship reliable dashboard features, tightened form validation logic that cut invalid submissions by ~35%, and used SQL to validate data end-to-end — from API response to what actually renders on screen.",
   },
 ];
 
-export default function Experience() {
+export default function Experience({ mode }) {
   return (
     <section id="experience" className="mb-32 scroll-mt-20">
       <h2 className="text-2xl font-bold text-white mb-10">Experience</h2>

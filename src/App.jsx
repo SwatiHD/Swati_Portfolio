@@ -6,22 +6,21 @@ import Experience from "./sections/Experience.jsx";
 import Skills from "./sections/Skills.jsx";
 import Featured from "./sections/Featured.jsx";
 import Contact from "./sections/Contact.jsx";
+import WeatherEffects from "./components/WeatherEffects.jsx";
 function App() {
   const [mode, setMode] = useState(0);
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="relative min-h-screen bg-slate-900 overflow-hidden">
       <Navbar mode={mode} setMode={setMode} />
 
+      <WeatherEffects mode={mode} />
       <HeroCanvas />
-
-      <main className="relative z-20 max-w-4xl mx-auto px-6 py-32 space-y-40">
-        <About />
-        <Experience />
-        <Skills />
-        <Featured />
-        <Contact />
-      </main>
+      <About mode={mode} />
+      <Experience mpde={mode} />
+      <Skills mode={mode} />
+      <Featured mode={mode} />
+      <Contact mode={mode} />
     </div>
   );
 }

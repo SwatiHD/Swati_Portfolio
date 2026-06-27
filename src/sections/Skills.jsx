@@ -1,8 +1,9 @@
 const skills = [
   "React",
+  "Node.js",
+  "Express",
   "Next.js",
   "TypeScript",
-  "Node.js",
   "Tailwind CSS",
   "HTML5 & CSS3",
   "JavaScript (ES6+)",
@@ -12,9 +13,12 @@ const skills = [
   "AI Integration",
   "Jest",
   "React Testing Library",
+  "Docker",
+  "Kubernetes",
+  "SQL",
 ];
 
-export default function Skills() {
+export default function Skills({ mode }) {
   return (
     <section id="skills" className="mb-32 scroll-mt-20">
       <h2 className="text-2xl font-bold text-white mb-10">Skills</h2>

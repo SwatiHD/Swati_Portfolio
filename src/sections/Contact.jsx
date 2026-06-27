@@ -1,7 +1,7 @@
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-export default function Contact() {
+export default function Contact({ mode }) {
   return (
     <section id="contact" className="pb-20 px-6 scroll-mt-20 max-w-6xl mx-auto">
       <div className="text-center">
@@ -53,20 +53,20 @@ export default function Contact() {
 
         {/* Instagram */}
         <a
-          href="https://www.instagram.com/swa.t888/"
+          href="https://github.com/SwatiHD"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-teal-400 transition-all duration-300 hover:-translate-y-1"
         >
           <div>
-            <h3 className="text-xl font-semibold text-white mb-3">Instagram</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">Github</h3>
 
             <p className="text-slate-400 leading-7">
               Follow my journey, creative work, and behind-the-scenes updates.
             </p>
           </div>
 
-          <FaInstagram className="text-4xl text-teal-400 mt-8 self-center" />
+          <FaGithub className="text-4xl text-teal-400 mt-8 self-center" />
         </a>
       </div>
     </section>
